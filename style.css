@@ -305,10 +305,15 @@ video{
     }
 }
 
+.projet_info{
+    align-items: center;
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
 #showreeltitle{
     font-size: 5vw;
     margin-top: 1rem;
-    margin-left: 2rem;
 }
 
 #showreelText{
@@ -317,8 +322,6 @@ video{
     font-style: normal;
     color: rgb(108, 108, 108);
     font-size: 0.8rem;
-    padding: 10px;
-    margin-left: 2rem;
     padding-bottom: 5rem;
 }
 
@@ -327,7 +330,7 @@ video{
 .carte {
   border-radius: 0.5em;
   padding: 0.5em;
-  width: max-content;
+  max-width: max-content;
   display: grid;
 }
 
@@ -365,8 +368,19 @@ video{
 .images {
   display: block;
   width: 30rem;
+  height: 30rem;
+  object-fit: cover;
 }
 
+@media (max-width:1000.98px) {
+    .images{
+        display: block;
+        margin: auto;
+        max-width: 95% !important;
+        height:  auto;
+        object-fit: cover;
+    }
+}
 main{
   display: flex;
   flex-wrap: wrap;
