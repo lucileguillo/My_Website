@@ -224,14 +224,11 @@ a:hover {
 footer{
     height: 100vh;
     max-width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto;
 }
 
 #contact{
     margin-top: -7rem;
-    max-width: 100%;
+    width: 100%;
     display: inline;
     position: absolute;
     text-align: center;
@@ -468,3 +465,11 @@ main{
 }
 
 
+
+
+
+
+
+.scroll-button{
+    display: none;
+}
