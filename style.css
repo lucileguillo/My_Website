@@ -85,6 +85,50 @@ a:hover {
     background-color: white;
 }
 
+@media (max-width: 1000.98px) {
+
+    #sectionThree{
+        padding-bottom: 5rem;
+    }
+
+    #blocUn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 5px;
+        
+    }
+
+    #imageOne{
+        width:100vw !important;
+        height: 30vh !important;
+    }
+
+    #BlocUnTextName{
+        margin-left: 1rem;
+    }
+
+    #sectionFour{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    #PhotoMoi{
+        position: relative;
+        width: 80vw !important;
+        height: 70% !important;
+    }
+
+    #moiText{
+        font-size: 0.6rem !important;
+
+    }
+}
+
 #imageOne{
     height: 50vh;
     width: 70vw;
@@ -156,16 +200,16 @@ a:hover {
     padding: 10px;
     text-align: left;
     max-width: 60ch;
-    margin-left: 2rem;
 }
 
 
-#photoMoi{
+#PhotoMoi{
     height: 80vh;
     width: 40vw;
     margin-top: 5vh;
     border: none;
     object-fit: cover;
+    object-position: top;
     overflow: hidden;
 }
 
