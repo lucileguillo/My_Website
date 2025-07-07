@@ -180,8 +180,15 @@ a:hover {
     height: 100vh;
     top: 0vh;
     box-sizing: border-box;
+    pad: 1rem;
     z-index: 2;
 }
+
+
+.information_perso {
+    padding-right: 2rem;
+}
+
 
 #moiTitle{
     font-family: "azo-sans-uber", sans-serif;
@@ -197,10 +204,12 @@ a:hover {
     font-weight: 50;
     font-style: normal;
     color: rgb(108, 108, 108);
+    justify-content: space-between;
     font-size: 0.8rem;
+    margin-left: 2rem;
     padding: 10px;
     text-align: left;
-    max-width: 60ch;
+    width: fit-content;
 }
 
 
