@@ -532,8 +532,12 @@ main{
     }
 
     a:hover {
-  color:#ffd800;
-}
+        color:#ffd800;
+    }
+
+    .custom-cursor{
+        display: none;
+    }
 }
 
 
@@ -546,6 +550,8 @@ main{
         background-color: transparent;
         top: -65vh;  
     }
+
+
 }
 
 
