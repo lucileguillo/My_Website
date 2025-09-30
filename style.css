@@ -413,11 +413,16 @@ video {
 
   .imagesBox {
     height: 50vh;
-    width: 30vw;
+    width: 45vw;
     border: none;
     overflow: hidden;
   }
 
+  @media (max-width: 480px) {
+    .imagesBox{
+      width: 80vw;
+    }
+  }
   #imageDeux-container {
     width: 100vw;
     display: flex;
