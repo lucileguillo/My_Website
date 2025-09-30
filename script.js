@@ -219,7 +219,9 @@ let Illustration = [
 
 function creerCarte(Illustration) {
   let contenu = `
-    <img class="images" src="${Illustration.image}" alt="ImageIllustration">
+    <div class ="imagesBox">
+      <img class="images" src="${Illustration.image}" alt="ImageIllustration">
+    </div>
   `;
   let carte = document.createElement("div");
   carte.innerHTML = contenu;

@@ -1,0 +1,286 @@
+//photographie
+function createPhotography(){
+  let photographiePaysage = [
+  {
+    image: "photographieBox/Montagne.jpg",
+    taille: "grand",
+  },
+  {
+    image: "photographieBox/belleile.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/belleiledeux.jpg",
+    taille: "grand",
+  },
+  {
+    image: "photographieBox/12102024_street_photography_1.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/12102024_street_photography_15.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bourse7.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bourse15.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/paris2024_6.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/paris2024_12.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/quiberon40.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/quiberon43.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/toureiffel3.jpg",
+    taille: "petit",
+  },
+];
+
+
+let photographiePortraits = [
+  {
+    image: "photographieBox/DSCF0713-2.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/DSCF0721-2-2.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/DSCF0709.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/photographyclass.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/photographyclasstwo.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/photographyclassthree.jpg",
+    taille: "petit",
+  },
+]
+
+let photographieSport = [
+  {
+    image: "photographieBox/bretagneclassic.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bretagneclassicdeux.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bretagneclassictrois.jpg",
+    taille: "petit",
+  },
+]
+
+let photographieConcert = [
+    {
+    image: "photographieBox/festivalinterceltiquedeux.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/festivalinterceltiqueun.jpg",
+    taille: "petit",
+  },
+]
+return photographiePaysage, photographiePortraits,photographieSport, photographieConcert;
+}
+
+
+function creerCarteDeux(createPhotography) {
+  let contenuDeux = `
+    <div class="imagesBox">
+      <img class="images ${createPhotography.photographiePaysage.taille}" src="${photographiePaysage.image}" alt="ImagePhotographie">
+    </div>
+    <div class="imagesBox">
+      <img class="images ${createPhotography.photographiePortraits.taille}" src="${photographiePortraits.image}" alt="ImagePhotographie">
+    </div>
+    <div class="imagesBox">
+      <img class="images ${createPhotography.photographieSport.taille}" src="${photographieSport.image}" alt="ImagePhotographie">
+    </div>
+    <div class="imagesBox">
+      <img class="images ${createPhotography.photographieConcert.taille}" src="${photographieConcert.image}" alt="ImagePhotographie">
+    </div>
+  `;
+  let carteDeux = document.createElement("div");
+  carteDeux.innerHTML = contenuDeux;
+  carteDeux.classList.add("carte");
+  return carteDeux;
+}
+
+// Boucle pour afficher les cartes
+for (let i = 0; i < createPhotography.length; i++) {
+  let carteDeux = creerCarteDeux(createPhotography[i]);
+  document.querySelector("#imageDeux-container").appendChild(carteDeux);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//photographie
+
+let photographie = [
+  {
+    image: "photographieBox/Montagne.jpg",
+    taille: "grand",
+  },
+  {
+    image: "photographieBox/belleile.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/belleiledeux.jpg",
+    taille: "grand",
+  },
+  {
+    image: "photographieBox/bretagneclassic.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bretagneclassicdeux.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bretagneclassictrois.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/festivalinterceltiquedeux.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/festivalinterceltiqueun.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/DSCF0713-2.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/DSCF0721-2-2.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/DSCF0709.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/12102024_street_photography_1.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/12102024_street_photography_15.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bourse7.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/bourse15.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/photographyclass.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/photographyclasstwo.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/photographyclassthree.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/paris2024_6.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/paris2024_12.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/quiberon40.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/quiberon43.jpg",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/toureiffel3.jpg",
+    taille: "petit",
+  },
+];
+
+function creerCarteDeux(photographie) {
+  let contenuDeux = `
+    <div class="imagesBox">
+      <img class="images ${photographie.taille}" src="${photographie.image}" alt="ImagePhotographie">
+    </div>
+  `;
+  let carteDeux = document.createElement("div");
+  carteDeux.innerHTML = contenuDeux;
+  carteDeux.classList.add("carte");
+  return carteDeux;
+}
+
+// Boucle pour afficher les cartes
+for (let i = 0; i < photographie.length; i++) {
+  let carteDeux = creerCarteDeux(photographie[i]);
+  document.querySelector("#imageDeux-container").appendChild(carteDeux);
+}
+
+
+document.addEventListener("DOMContentLoaded", changerVue);
