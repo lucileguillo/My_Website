@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
+  cursor: url("photographieBox/lulucurseur.png")0 0, pointer;
 }
 
 body {
@@ -209,7 +210,8 @@ a:hover {
   overflow: hidden;
 }
 
-.custom-cursor {
+/* .custom-cursor {
+  
   pointer-events: none;
   position: fixed;
   height: 32px;
@@ -219,7 +221,7 @@ a:hover {
   transform: translate(-50%, -50%);
   transform-origin: top left;
   z-index: 10;
-}
+} */
 
 .click {
   scale: 0.8;
@@ -324,6 +326,9 @@ video {
 }
 
 @media (max-width: 1000.98px) {
+  *{
+    cursor:initial;
+  }
   #video {
     height: 70vh;
     width: 100vw;

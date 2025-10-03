@@ -1,106 +1,106 @@
 let photographie = [
   {
-    image: "photographieBox/festivalinterceltiquedeux.jpg",
+    image: "photographieBox/festivalinterceltiquedeux.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/festivalinterceltiqueun.jpg",
+    image: "photographieBox/festivalinterceltiqueun.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/DSCF5743.jpg",
+    image: "photographieBox/DSCF5743.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/DSCF5614.jpg",
+    image: "photographieBox/DSCF5614.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/DSCF5547.jpg",
+    image: "photographieBox/DSCF5547.webp",
     taille: "petit",
   },
     {
-    image: "photographieBox/bretagneclassic.jpg",
+    image: "photographieBox/bretagneclassic.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/bretagneclassicdeux.jpg",
+    image: "photographieBox/bretagneclassicdeux.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/bretagneclassictrois.jpg",
+    image: "photographieBox/bretagneclassictrois.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/DSCF0713-2.jpg",
+    image: "photographieBox/DSCF0713-2.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/DSCF0721-2-2.jpg",
+    image: "photographieBox/DSCF0721-2-2.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/DSCF0709.jpg",
+    image: "photographieBox/DSCF0709.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/Montagne.jpg",
+    image: "photographieBox/Montagne.webp",
     taille: "grand",
   },
   {
-    image: "photographieBox/belleile.jpg",
+    image: "photographieBox/belleile.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/belleiledeux.jpg",
+    image: "photographieBox/belleiledeux.webp",
     taille: "grand",
   },
   {
-    image: "photographieBox/12102024_street_photography_1.jpg",
+    image: "photographieBox/12102024_street_photography_1.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/12102024_street_photography_15.jpg",
+    image: "photographieBox/12102024_street_photography_15.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/bourse7.jpg",
+    image: "photographieBox/bourse7.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/bourse15.jpg",
+    image: "photographieBox/bourse15.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/photographyclass.jpg",
+    image: "photographieBox/photographyclass.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/photographyclasstwo.jpg",
+    image: "photographieBox/photographyclasstwo.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/photographyclassthree.jpg",
+    image: "photographieBox/photographyclassthree.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/paris2024_6.jpg",
+    image: "photographieBox/paris2024_6.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/paris2024_12.jpg",
+    image: "photographieBox/paris2024_12.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/quiberon40.jpg",
+    image: "photographieBox/quiberon40.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/quiberon43.jpg",
+    image: "photographieBox/quiberon43.webp",
     taille: "petit",
   },
   {
-    image: "photographieBox/toureiffel3.jpg",
+    image: "photographieBox/toureiffel3.webp",
     taille: "petit",
   },
 ];
