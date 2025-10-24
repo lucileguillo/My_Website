@@ -1,3 +1,50 @@
+
+let intro = [
+  {
+    image:"photographieBox/anaelle-photoshoot_1.webp",
+  },
+  {
+    image:"photographieBox/DSCF5547.webp",
+  },
+  {
+    image:"photographieBox/dounia-photoshoot_3.webp",
+  },
+  {
+    image:"photographieBox/DSCF0721-2-2.webp",
+  },
+  {
+    image:"photographieBox/DSCF5743.webp",
+  },
+  {
+    image:"photographieBox/festivalinterceltiquedeux.webp",
+  },
+  {
+    image:"photographieBox/belleile.webp",
+  },
+  {
+    image:"photographieBox/montagne2.webp",
+  },
+]
+
+function creerIntro(intro) {
+  let contenuIntro = `
+    <div class="intro-grid">
+      <img class="images" src="${intro.image}" alt="ImagePhotographie">
+    </div>
+  `;
+  let photoIntro = document.createElement("div");
+  photoIntro.innerHTML = contenuIntro;
+  return photoIntro;
+}
+
+// Boucle pour afficher les cartes
+for (let i = 0; i < intro.length; i++) {
+  let photoIntro = creerIntro(intro[i]);
+  document.querySelector("#photography-intro").appendChild(photoIntro);
+}
+
+
+
 let photographie = [
   {
     image: "photographieBox/festivalinterceltiquedeux.webp",
@@ -19,6 +66,18 @@ let photographie = [
     image: "photographieBox/DSCF5547.webp",
     taille: "petit",
   },
+  {
+    image: "photographieBox/anaelle-photoshoot_1.webp",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/anaelle-photoshoot_2.webp",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/anaelle-photoshoot_3.webp",
+    taille: "petit",
+  },
     {
     image: "photographieBox/bretagneclassic.webp",
     taille: "petit",
@@ -29,6 +88,18 @@ let photographie = [
   },
   {
     image: "photographieBox/bretagneclassictrois.webp",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/dounia-photoshoot_3.webp",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/dounia-photoshoot_1.webp",
+    taille: "petit",
+  },
+  {
+    image: "photographieBox/dounia-photoshoot_2.webp",
     taille: "petit",
   },
   {
@@ -125,3 +196,4 @@ for (let i = 0; i < photographie.length; i++) {
 
 
 document.addEventListener("DOMContentLoaded", changerVue);
+

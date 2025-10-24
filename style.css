@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
-  cursor: url("photographieBox/lulucurseur.png")0 0, pointer;
+  cursor: url("images/lulucurseur.png")0 0, pointer;
 }
 
 body {
@@ -581,4 +581,16 @@ main {
 
 .scroll-button {
   display: none;
+}
+
+
+
+
+
+#photography-intro{
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-gap: 0;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
 }
