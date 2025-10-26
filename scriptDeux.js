@@ -1,13 +1,22 @@
 
 let intro = [
   {
-    image:"photographieBox/anaelle-photoshoot_1.webp",
-  },
-  {
     image:"photographieBox/DSCF5547.webp",
   },
   {
     image:"photographieBox/dounia-photoshoot_3.webp",
+  },
+  {
+    image:"photographieBox/anaelle-photoshoot_1.webp",
+  },
+  {
+    image:"photographieBox/photoshoot-nolhan-flowers.jpg",
+  },
+  {
+    image:"photographieBox/montagne2.webp",
+  },
+  {
+    image:"photographieBox/photoshoot-anaelle-ball.jpg",
   },
   {
     image:"photographieBox/DSCF0721-2-2.webp",
@@ -15,24 +24,14 @@ let intro = [
   {
     image:"photographieBox/DSCF5743.webp",
   },
-  {
-    image:"photographieBox/festivalinterceltiquedeux.webp",
-  },
-  {
-    image:"photographieBox/belleile.webp",
-  },
-  {
-    image:"photographieBox/montagne2.webp",
-  },
 ]
 
 function creerIntro(intro) {
   let contenuIntro = `
-    <div class="intro-grid">
-      <img class="images" src="${intro.image}" alt="ImagePhotographie">
-    </div>
+      <img class="intro-images" src="${intro.image}" alt="ImagePhotographie">
   `;
   let photoIntro = document.createElement("div");
+  photoIntro.classList.add("intro-grid");
   photoIntro.innerHTML = contenuIntro;
   return photoIntro;
 }

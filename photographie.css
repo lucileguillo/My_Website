@@ -1,50 +1,143 @@
+#photography-intro{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 0;
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    overflow: hidden;
+}
 
 
-/* Motion design */
+.intro-grid {
+    height: 50vh;
+    width: 45vw;
+    border: none;
+    overflow: hidden;
+}
+.intro-images{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 25vw;
+    min-height: 50vh;
+    object-fit: cover;
+}
 
-#video {
-  width: 100vw;
-  height: 90vh;
+.intro-title{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+
+.intro-text{
+    position: absolute;
+    color: var(--first-color);
+    font-size: 2rem;
+}
+
+.intro-text1{
+    top: 0;
+    left: 50%;
+}
+
+.intro-text2{
+    top: 2rem;
+    left: 50%;
+}
+
+.intro-text3{
+    bottom: 2rem;
+    left: 25%;
+}
+
+.intro-text4{
+    bottom: 0;
+    left: 25%;
+}
+
+.intro-text5{
+    transform: rotate(-90deg);
+    bottom: 2rem;
+    left: -1rem;
+}
+
+.intro-text6{
+    transform: rotate(90deg);
+    top: 8rem;
+    right: -7rem;
+}
+
+.intro-text7{
+    transform: rotate(90deg);
+    bottom: 5.7rem;
+    right: -4.7rem;
+}
+
+
+.pin{
+  display: flex;
+  height: 100%;
+}
+
+.pin-box{
+  margin-left: 30%;
+}
+
+.pin-trombone{
+  position: absolute;
+  height: 15%;
+  z-index: 4;
+  margin-top: 3.7rem;
+  left: 33%;
+}
+
+.pin-img1{
+  position: absolute;
+  height: 40%;
+  z-index: 2;
+  left: 27%;
+  margin-top: 6rem;
+  transform: rotate(3deg);
+}
+
+.pin-img2{
+    position: absolute;
+    height: 38%;
+    z-index: 3;
+    left: 29%;
+    margin-top: 6rem;
+    transform: rotate(-2deg);
+}
+
+.pin-main{
+  display: flex;
+  align-items: center;
+  max-width: 100%;
   overflow: hidden;
 }
 
-video {
-  max-height: 900px;
+.pin-main-img{
+  height: 70%;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  object-fit: cover;
 }
 
-@media (max-width: 1000.98px) {
-  *{
-    cursor:initial;
-  }
-  #video {
-    height: 70vh;
-    width: 100vw;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-}
 
-.projet_info {
-  align-items: center;
-  margin: 1rem;
-  padding-left: 1rem;
-}
 
-#showreeltitle {
-  font-size: 5vw;
-  margin-top: 1rem;
-}
 
-#showreelText {
-  font-family: "azo-sans-uber", sans-serif;
-  font-weight: 50;
-  font-style: normal;
-  color: rgb(108, 108, 108);
-  font-size: 0.8rem;
-  padding-bottom: 5rem;
-}
+
+
+
+
+
+
+
+
+
+
 
 /* Illustration */
 
@@ -156,84 +249,4 @@ main {
     width: 60vw !important;
     height: 50vh !important;
   }
-}
-
-
-/*graphisme*/
-
-.principal {
-  width: 100vw;
-}
-
-.project-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  margin-bottom: 50px;
-  padding-bottom: 5rem;
-}
-
-@media (max-width: 1000.98px) {
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 10px;
-    align-items: center;
-  }
-
-  #pictureOne {
-    margin-bottom: 5px;
-    width: 80vw !important;
-    height: 70vh;
-  }
-
-  .informationTexte {
-    width: 80vw !important;
-  }
-}
-
-.project-item-footer {
-  align-items: center;
-}
-
-#pictureOne {
-  height: 60vh;
-  width: 40vw;
-  overflow: hidden;
-  object-fit: contain;
-}
-
-.projetNom {
-  font-size: 2rem;
-  width: 20vw;
-  margin-bottom: 100px;
-}
-
-.informationTexte {
-  font-size: 0.7rem;
-  width: 40vw;
-  color: gray;
-}
-
-.projet-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.projet-item :hover {
-  color: black;
-}
-
-
-
-
-
-
-.scroll-button {
-  display: none;
 }
