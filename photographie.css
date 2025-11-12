@@ -7,6 +7,28 @@
     overflow: hidden;
 }
 
+@media (max-width: 1000.98px) {
+  #photography-intro{
+      display: none;
+  }
+}
+
+#photography-intro-large{
+  height: 100%;
+}
+
+.photography-intro-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 1000.98px) {
+  #photography-intro-large{
+      display: none;
+  }
+}
+
 
 .intro-grid {
     height: 50vh;
@@ -291,22 +313,23 @@ main {
   & .diary-main{
     display: flex;
     justify-content:space-between;
-    width: 50%;
-    height: 90%;
+    width: 50vw;
+    height: 80vh;
 
     & .diary-img-main{
       object-fit: cover;
       width: 100%;
+      height: 100%;
     }
   }
   & .diary-grid{
-      display: grid;
-      grid-template-columns: repeat(2, 40%);
-      grid-template-rows: repeat(2, 40%);
-      gap: 20px;
-      margin-left: 3%;
-      width: 50%;
-      justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(2, 49%);
+    gap: 2%;
+    width: 50%;
+    height: 80vh;
+    justify-content: end;
 
     & .diary-grid-img{
       width: 100%;
@@ -330,10 +353,85 @@ main {
       transform: rotate(3deg);
     }
   }
+
+
   
 }
 
-@media (max-width: 1400px) {
+.parallax-container{
+  display: flex;
+  flex-direction: row;
+  margin: 5rem 3%;
+
+  & .parallax-first{
+    position: relative;
+    text-align: end;
+    margin-top: 10%;
+  }
+
+  & .parallax-second{
+    position: relative;
+    text-align: end;
+
+    @media (max-width: 1000.98px){
+      text-align: start;
+      margin-top: 2rem;
+    }
+  }
+
+  & .parallax-img{
+    width: 60%;
+
+    @media (max-width: 1000.98px){
+      width: 250px;
+    }
+  }
+
+  & .parallax-film-first{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -8rem;
+  }
+
+  & .parallax-film-second{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10rem;
+    right: 50%;  
+
+    @media (max-width: 1000.98px){
+      top: -7rem;
+      right: 0;
+    }
+  }
+
+  & .parallax-film-img{
+    width: 14rem;
+    height: 17rem;
+    object-fit: cover;
+    padding: 0.5rem;
+
+    @media (max-width: 1000.98px){
+      width: 10rem;
+      height: 11rem;
+    }
+  }
+
+  @media (max-width: 1000.98px){
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px){
+  .parallax-film-img {
+    width: 12rem;
+    height: 14rem;
+  }
+}
+
+@media (max-width: 1000.98px) {
   .diary-container{
     flex-direction: column;
     align-items: center;
@@ -341,12 +439,24 @@ main {
     & .diary-main{
       margin-bottom: 50px;
       width: 100%;
+      height: 100vh;
+    }
+
+    & .diary-img-main{
+      width: 80% !important;
+      height: 85% !important;
+      margin: auto;
     }
 
     & .diary-grid{        
-      grid-template-columns: repeat(2, 100%);
+      grid-template-columns: repeat(2, 70%);
       gap: 5px;
-      margin: 0;
+      justify-content: center;
+      height: 100vh;
+
+      @media (max-width: 500px) {       
+        grid-template-columns: repeat(2, 100%);
+      }
     }
     
     & .diary-text-container{
@@ -361,3 +471,4 @@ main {
     }
   }
 }
+

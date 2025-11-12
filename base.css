@@ -1,5 +1,13 @@
 :root {
+  /*color*/
   --first-color:rgb(255, 0, 0);
+
+  /*font*/
+  --font-title:"gigantic", sans-serif;
+  --font-text:"azo-sans-uber", sans-serif;
+
+  /*breakpoints*/
+  --md-breakpoint: 1000.98px;
 }
 
 
@@ -13,8 +21,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    font-family: "azo-sans-uber", sans-serif;
-    font-style: normal;
+    font-family: var(--font-text);
     overflow-x: none;
 }
 
@@ -36,9 +43,7 @@ body {
 
 #menu {
   color: black;
-  font-family: "gigantic", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  font-family: var(--font-title);
   position: absolute;
   top: -10;
   font-size: 7vw;
@@ -46,19 +51,16 @@ body {
 }
 
 #navigationBar {
-  font-family: "gigantic", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  font-family: var(--font-title);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem !important;
+  font-size: 1rem;
   width: 100vw;
   height: 7vh;
   padding: 0 20px;
   position: sticky;
   top: 0;
-  box-sizing: border-box;
   z-index: 9;
   background-color: white;
 }
@@ -74,18 +76,14 @@ a:hover {
 
 #sectionTwo {
   color: black;
-  font-family: "gigantic", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  font-family: var(--font-title);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.5vw;
-  max-width: 100%;
   padding: 0 20px;
   position: sticky;
   top: 0;
-  box-sizing: border-box;
   z-index: 9;
   background-color: white;
 }
@@ -144,9 +142,7 @@ a:hover {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  font-family: "azo-sans-uber", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: var(--font-text);
   font-size: 5vw;
   width: 50vw;
   justify-content: bottom;
@@ -186,7 +182,7 @@ a:hover {
 }
 
 #moiTitle {
-  font-family: "azo-sans-uber", sans-serif;
+  font-family: var(--font-text);
   font-weight: 400;
   font-style: normal;
   font-size: 5vw;
@@ -195,7 +191,7 @@ a:hover {
 }
 
 #moiText {
-  font-family: "azo-sans-uber", sans-serif;
+  font-family: var(--font-text);
   font-weight: 50;
   font-style: normal;
   color: rgb(108, 108, 108);
@@ -281,7 +277,7 @@ footer {
   position: absolute;
   text-align: center;
   color: #ffd800;
-  font-family: "azo-sans-uber", sans-serif;
+  font-family: var(--font-text);
   font-weight: 50;
   font-style: normal;
 }

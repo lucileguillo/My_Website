@@ -10,13 +10,13 @@ let intro = [
     image:"photographieBox/anaelle-photoshoot_1.webp",
   },
   {
-    image:"photographieBox/photoshoot-nolhan-flowers.jpg",
+    image:"photographieBox/photoshoot-nolhan-flowers.webp",
   },
   {
     image:"photographieBox/montagne2.webp",
   },
   {
-    image:"photographieBox/photoshoot-anaelle-ball.jpg",
+    image:"photographieBox/photoshoot-anaelle-ball.webp",
   },
   {
     image:"photographieBox/DSCF0721-2-2.webp",
