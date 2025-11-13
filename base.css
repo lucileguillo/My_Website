@@ -51,19 +51,28 @@ body {
 }
 
 #navigationBar {
-  font-family: var(--font-title);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  width: 100vw;
-  height: 7vh;
-  padding: 0 20px;
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  background-color: white;
+    font-family: var(--font-title);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100vw;
+    height: 7vh;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+
+    @media (max-width: 1000.98px) {
+      font-size: 0.7rem;
+      height: 100%;
+      background-color: chite;
+    } 
 }
+
+#navigationBar > div {
+    padding: 2px;
+  }
 
 a {
   text-decoration: none;
@@ -76,17 +85,17 @@ a:hover {
 
 #sectionTwo {
   color: black;
-  font-family: var(--font-title);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 1.5vw;
   padding: 0 20px;
   position: sticky;
   top: 0;
   z-index: 9;
   background-color: white;
+
 }
+
+
 
 @media (max-width: 560px) {
   #sectionThree {
@@ -317,18 +326,8 @@ footer {
 }
 
 @media (max-width: 1000.98px) {
-  #navigationBar {
-    display: block;
-    position: relative;
-    text-align: center;
-    font-size: 2rem !important;
-    background-color: transparent;
-    top: -65vh;
-  }
 
-  #navigationBar > div {
-    padding: 7px;
-  }
+
 
   a:hover {
     color: #ffd800;
@@ -336,16 +335,5 @@ footer {
 
   .custom-cursor {
     display: none;
-  }
-}
-
-@media (max-width: 500px) {
-  #navigationBar {
-    display: block;
-    position: relative;
-    text-align: center;
-    font-size: 1.2rem !important;
-    background-color: transparent;
-    top: -65vh;
   }
 }
