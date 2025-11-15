@@ -1,3 +1,81 @@
+let intro = [
+    {
+        image:"photographieBox/DSCF5547.webp",
+    },
+    {
+        image:"photographieBox/dounia-photoshoot_3.webp",
+    },
+    {
+        image:"photographieBox/anaelle-photoshoot_1.webp",
+    },
+    {
+        image:"photographieBox/photoshoot-nolhan-flowers.webp",
+    },
+    {
+        image:"photographieBox/montagne2.webp",
+    },
+    {
+        image:"photographieBox/photoshoot-anaelle-ball.webp",
+    },
+    {
+        image:"photographieBox/DSCF0721-2-2.webp",
+    },
+    {
+        image:"photographieBox/DSCF5743.webp",
+    },
+]
+
+let introSmall = [
+    {
+        image:"photographieBox/dounia-photoshoot_3.webp",
+    },
+    {
+        image:"photographieBox/anaelle-photoshoot_1.webp",
+    },
+    {
+        image:"photographieBox/DSCF0721-2-2.webp",
+    },
+    {
+        image:"photographieBox/DSCF5743.webp",
+    },
+]
+
+/* Intro section */
+
+function creerIntro(intro) {
+    let contenuIntro = `
+        <img class="intro-images" src="${intro.image}" alt="ImagePhotographie">
+    `;
+    let photoIntro = document.createElement("div");
+    photoIntro.classList.add("intro-grid");
+    photoIntro.innerHTML = contenuIntro;
+    return photoIntro;
+}
+
+
+for (let i = 0; i < intro.length; i++) {
+    let photoIntro = creerIntro(intro[i]);
+    document.querySelector("#photography-intro").appendChild(photoIntro);
+}
+
+/*Intro Mobile */
+
+function creerIntro(introSmall) {
+    let contenuIntroSmall = `
+        <img class="intro-images" src="${introSmall.image}" alt="ImagePhotographie">
+    `;
+    let photoIntroSmall = document.createElement("div");
+    photoIntroSmall.classList.add("intro-grid");
+    photoIntroSmall.innerHTML = contenuIntroSmall;
+    return photoIntroSmall;
+}
+
+for (let i = 0; i < introSmall.length; i++) {
+    let photoIntroSmall = creerIntro(introSmall[i]);
+    document.querySelector("#photography-intro-large").appendChild(photoIntroSmall);
+}
+
+/* Film section parallax */
 gsap.registerPlugin(ScrollTrigger)
 
 document.addEventListener("DOMContentLoaded", function () {     
@@ -26,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ScrollTrigger.create({
         trigger: ".parallax-film-second",
-        start: "top +=400vh",
-        end: "+=800vh",
+        start: "top +=300vh",
+        end: "+=700vh",
         scrub: 1,
         onUpdate: (self) => {
             gsap.to(".parallax-film-second", {
@@ -37,22 +115,144 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         }
     })
-
-    // parallax.forEach(parallax => {
-    //     ScrollTrigger.create({
-    //         trigger: parallax.class,
-    //         start: "top top",
-    //         end: "+=1200vh",
-    //         scrub: 1,
-    //         onUpdate: (self) =>{
-    //             gsap.to(parallax.class, {
-    //                 y: `${parallax.endTranslateY * self.progress}px`, 
-    //                 rotate: `${parallax.rotate * self.progress * 2}`,
-    //                 duration: 0.5,
-    //                 ease: "power3.out",
-    //             })
-    //         }
-    //     })
-        
-    // });
 });
+
+
+/* Section Carrousel */
+let carrousel = [
+    { image: "photographieBox/bretagneclassicquatre.webp" },
+    { image: "photographieBox/bretagneclassictrois.webp" },
+    { image: "photographieBox/bretagneclassicdeux.webp" },
+    { image: "photographieBox/bretagneclassicsix.webp" },
+    { image: "photographieBox/bretagneclassicsept.webp" },
+    { image: "photographieBox/bretagneclassichuit.webp" },
+    { image: "photographieBox/bretagneclassicneuf.webp" },
+    { image: "photographieBox/bretagneclassicdix.webp" },
+    { image: "photographieBox/bretagneclassiccinq.webp" },
+    { image: "photographieBox/bretagneclassic.webp" },
+];
+
+const track = document.querySelector(".track");
+const total = carrousel.length;
+const slideWidth = 300;
+ 
+let extended = [...carrousel, ...carrousel, ...carrousel];
+ 
+extended.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "carrousel-container";
+    div.innerHTML = `
+    <div class="inner">
+        <img class="carrousel-images" src="${item.image}" />
+    </div>
+`;
+ 
+    track.appendChild(div);
+});
+ 
+const slides = document.querySelectorAll(".carrousel-container");
+ 
+let indexActuel = total;  
+ 
+function updatePosition(skipTransition = false) {
+ 
+    if (skipTransition) {
+        track.style.transition = "none";
+        track.classList.add("no-zoom-transition");
+    }
+    else {
+        track.style.transition = "transform 0.4s ease";
+        track.classList.remove("no-zoom-transition");
+    }
+ 
+    const offset = -(indexActuel * slideWidth) + (window.innerWidth/2 - 150);
+    track.style.transform = `translateX(${offset}px)`;
+ 
+    slides.forEach((s, i) => {
+        s.classList.toggle("active", i === indexActuel);
+    });
+}
+ 
+track.addEventListener("transitionend", () => {
+ 
+    if (indexActuel < total) {
+        indexActuel += total;
+ 
+        track.classList.add("no-transition");
+ 
+        requestAnimationFrame(() => {
+            updatePosition(true);
+ 
+            requestAnimationFrame(() => {
+                track.classList.remove("no-transition");
+            });
+        });
+    }
+
+    if (indexActuel >= total * 2) {
+        indexActuel -= total;
+
+        track.classList.add("no-transition");
+
+        requestAnimationFrame(() => {
+            updatePosition(true);
+
+            requestAnimationFrame(() => {
+                track.classList.remove("no-transition");
+            });
+        });
+    }
+});
+
+slides.forEach((slide, i) => {
+    slide.onclick = () => {
+        indexActuel = i;
+        updatePosition();
+    };
+});
+
+updatePosition(true);
+
+
+/* Section Paysage */
+
+let photographiePaysage = [
+    {
+    image: "photographieBox/Montagne.webp",
+    taille: "grand",
+    },
+    {
+    image: "photographieBox/belleile.webp",
+    taille: "petit",
+    },
+    {
+    image: "photographieBox/12102024_street_photography_1.webp",
+    taille: "petit",
+    },
+    {
+    image: "photographieBox/festivalinterceltiquedeux.webp",
+    taille: "petit",
+    },
+    {
+    image: "photographieBox/festivalinterceltiqueun.webp",
+    taille: "petit",
+    },
+    {
+    image: "photographieBox/belleiledeux.webp",
+    taille: "grand",
+    },
+];
+
+function creerPaysage(photographiePaysage) {
+    let contenuPaysage = `
+        <img class="paysage-img ${photographiePaysage.taille}" src="${photographiePaysage.image}" alt="ImagePhotographie">
+    `;
+    let paysagePhoto = document.createElement("div");
+    paysagePhoto.classList.add("paysage-grid");
+    paysagePhoto.innerHTML = contenuPaysage;
+    return paysagePhoto;
+}   
+for (let i = 0; i < photographiePaysage.length; i++) {
+    let paysagePhoto = creerPaysage(photographiePaysage[i]);
+    document.querySelector("#paysage-container").appendChild(paysagePhoto);
+}
