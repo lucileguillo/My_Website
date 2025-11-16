@@ -1,7 +1,3 @@
-*{ 
-  user-select: none;
-}
-
 #photography-intro{
     display: grid;
     grid-template-columns: repeat(4, 25%);

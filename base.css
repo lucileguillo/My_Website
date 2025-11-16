@@ -17,6 +17,11 @@
     box-sizing: border-box;
     scrollbar-width: none;
     cursor: url("images/lulucurseur.png")0 0, pointer;
+    user-select: none;
+
+    @media (max-width: 1000.98px) {
+      cursor:auto;
+    }
 }
 
 body {
@@ -66,7 +71,7 @@ body {
     @media (max-width: 1000.98px) {
       font-size: 0.7rem;
       height: 100%;
-      background-color: chite;
+      background-color: white;
     } 
 }
 
@@ -83,7 +88,7 @@ a:hover {
   color: rgb(255, 0, 0);
 }
 
-#sectionTwo {
+/* #sectionTwo {
   color: black;
   display: flex;
   font-size: 1.5vw;
@@ -93,7 +98,7 @@ a:hover {
   z-index: 9;
   background-color: white;
 
-}
+} */
 
 
 
