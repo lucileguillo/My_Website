@@ -1,6 +1,6 @@
 let intro = [
     {
-        image:"photographieBox/DSCF5547.webp",
+        image:"photographieBox/bretagneclassiccinq.webp",
     },
     {
         image:"photographieBox/dounia-photoshoot_3.webp",
@@ -9,19 +9,19 @@ let intro = [
         image:"photographieBox/anaelle-photoshoot_1.webp",
     },
     {
-        image:"photographieBox/photoshoot-nolhan-flowers.webp",
+        image:"photographieBox/bretagneclassic.webp",
     },
     {
-        image:"photographieBox/montagne2.webp",
+        image:"photographieBox/DSCF5743.webp",
     },
     {
-        image:"photographieBox/photoshoot-anaelle-ball.webp",
+        image:"photographieBox/anaelle-photoshoot-4.jpg",
     },
     {
         image:"photographieBox/DSCF0721-2-2.webp",
     },
     {
-        image:"photographieBox/DSCF5743.webp",
+        image:"photographieBox/bretagneclassictrois.webp",
     },
 ]
 
@@ -33,7 +33,7 @@ let introSmall = [
         image:"photographieBox/anaelle-photoshoot_1.webp",
     },
     {
-        image:"photographieBox/DSCF0721-2-2.webp",
+        image:"photographieBox/bretagneclassiccinq.webp",
     },
     {
         image:"photographieBox/DSCF5743.webp",
@@ -135,9 +135,12 @@ let carrousel = [
 const track = document.querySelector(".track");
 const total = carrousel.length;
 const slideWidth = 300;
- 
+
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
 let extended = [...carrousel, ...carrousel, ...carrousel];
- 
+
 extended.forEach(item => {
     const div = document.createElement("div");
     div.className = "carrousel-container";
@@ -146,16 +149,16 @@ extended.forEach(item => {
         <img class="carrousel-images" src="${item.image}" />
     </div>
 `;
- 
+
     track.appendChild(div);
 });
- 
+
 const slides = document.querySelectorAll(".carrousel-container");
- 
+
 let indexActuel = total;  
- 
+
 function updatePosition(skipTransition = false) {
- 
+
     if (skipTransition) {
         track.style.transition = "none";
         track.classList.add("no-zoom-transition");
@@ -164,25 +167,25 @@ function updatePosition(skipTransition = false) {
         track.style.transition = "transform 0.4s ease";
         track.classList.remove("no-zoom-transition");
     }
- 
+
     const offset = -(indexActuel * slideWidth) + (window.innerWidth/2 - 150);
     track.style.transform = `translateX(${offset}px)`;
- 
+
     slides.forEach((s, i) => {
         s.classList.toggle("active", i === indexActuel);
     });
-}
- 
-track.addEventListener("transitionend", () => {
- 
+    }
+
+    track.addEventListener("transitionend", () => {
+
     if (indexActuel < total) {
         indexActuel += total;
- 
+
         track.classList.add("no-transition");
- 
+
         requestAnimationFrame(() => {
             updatePosition(true);
- 
+
             requestAnimationFrame(() => {
                 track.classList.remove("no-transition");
             });
@@ -209,6 +212,18 @@ slides.forEach((slide, i) => {
         indexActuel = i;
         updatePosition();
     };
+
+    
+});
+
+prev.addEventListener("click", () => {
+    indexActuel--;
+    updatePosition();
+});
+
+next.addEventListener("click", () => {
+    indexActuel++;
+    updatePosition();
 });
 
 updatePosition(true);

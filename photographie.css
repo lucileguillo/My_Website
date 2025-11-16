@@ -150,17 +150,12 @@
   height: 15%;
   z-index: 4;
   top: -5.4%;
-
-  /* margin-top: 2.7rem; */
-  /* right: -237px; */
 }
 
 .pin-img1{
   position: absolute;
   height: 40%;
   z-index: 2;
-  /* left: 27%; */
-  /* margin-top: 6rem; */
   transform: rotate(3deg);
 }
 
@@ -168,8 +163,6 @@
     position: absolute;
     height: 38%;
     z-index: 3;
-    /* left: 29%; */
-    /* margin-top: 6rem; */
     transform: rotate(-2deg);
 }
 
@@ -199,12 +192,10 @@
 
   .pin-img1{
     height: 37%;
-    /* top: 65px; */
   }
 
   .pin-img2{
     height: 37%;
-    /* top: 65px; */
   }
 
   .pin-trombone{
@@ -452,6 +443,7 @@
 #carrousel {
     display: flex;
     position: relative;
+    align-items: center;
     width: 100%;
     overflow: hidden;
     height: 100%;
@@ -493,4 +485,20 @@
 
 .no-zoom-transition .inner {
     transition: none !important;
+}
+
+.arrow {
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--first-color);
+  z-index: 2;
+  color: white;
+  font-weight: 700;
+  margin: 0 5px;
+}
+.next{
+  right: 0;
 }
