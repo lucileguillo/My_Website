@@ -81,7 +81,7 @@ window.addEventListener('load', function () {
             this.canvasWidth = canvas.width;
             this.canvasHeight = canvas.height;
             this.particles = [];
-            this.gap = 2;
+            this.gap = 4;
             this.mouse = {
                 radius: 3000,
                 x: -1000,
