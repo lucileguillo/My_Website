@@ -1,6 +1,8 @@
 :root {
   /*color*/
   --first-color:rgb(255, 0, 0);
+  --second-color: #501a03;
+  --third-color:rgb(255, 202, 210);
 
   /*font*/
   --font-title:"gigantic", sans-serif;
@@ -51,7 +53,7 @@ body {
   font-family: var(--font-title);
   position: absolute;
   top: -10;
-  font-size: 7vw;
+  font-size: 5vw;
   z-index: 2;
 }
 
@@ -76,7 +78,7 @@ body {
 }
 
 #navigationBar > div {
-    padding: 2px;
+    padding: 8px;
   }
 
 a {
@@ -100,146 +102,6 @@ a:hover {
 
 }
 
-
-
-@media (max-width: 560px) {
-  #sectionThree {
-    padding-bottom: 5rem;
-  }
-
-  #blocUn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    gap: 5px;
-  }
-
-  #imageOne {
-    width: 100vw !important;
-    height: 30vh !important;
-  }
-
-  #BlocUnTextName {
-    margin-left: 1rem;
-  }
-
-  #sectionFour {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    gap: 5px;
-  }
-
-  #PhotoMoi {
-    position: relative;
-    width: 80vw !important;
-    height: 70% !important;
-  }
-
-  #moiText {
-    font-size: 0.6rem !important;
-  }
-}
-
-#imageOne {
-  height: 50vh;
-  width: 70vw;
-  margin-top: 5vh;
-  border: none;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-#blocUnText {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  font-family: var(--font-text);
-  font-size: 4vw;
-  width: 50vw;
-  justify-content: bottom;
-  align-items: bottom;
-}
-
-#blocUn {
-  display: flex;
-  color: black;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5vw;
-  width: 100vw;
-  top: 0vh;
-  box-sizing: border-box;
-  position: sticky;
-  z-index: 2;
-  align-items: first baseline;
-}
-
-#sectionFour {
-  display: flex;
-  color: black;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5vw;
-  width: 100vw;
-  height: 100vh;
-  top: 0vh;
-  box-sizing: border-box;
-  pad: 1rem;
-  z-index: 2;
-}
-
-.information_perso {
-  padding-right: 2rem;
-}
-
-#moiTitle {
-  font-family: var(--font-text);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 5vw;
-  margin-left: 2rem;
-  text-align: center;
-}
-
-#moiText {
-  font-family: var(--font-text);
-  font-weight: 50;
-  font-style: normal;
-  color: rgb(108, 108, 108);
-  justify-content: space-between;
-  font-size: 0.8rem;
-  margin-left: 2rem;
-  padding: 10px;
-  text-align: left;
-  width: fit-content;
-}
-
-#PhotoMoi {
-  height: 80vh;
-  width: 40vw;
-  margin-top: 5vh;
-  border: none;
-  object-fit: cover;
-  object-position: top;
-  overflow: hidden;
-}
-
-/* .custom-cursor {
-  
-  pointer-events: none;
-  position: fixed;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  background-color: white;
-  transform: translate(-50%, -50%);
-  transform-origin: top left;
-  z-index: 10;
-} */
-
 .click {
   scale: 0.8;
 }
@@ -260,6 +122,7 @@ a:hover {
   border: none;
   object-fit: cover;
   overflow: hidden;
+  z-index: 1;
 }
 
 #nameFooterBox {
