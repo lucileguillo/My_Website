@@ -1,37 +1,45 @@
-/* body{
-    background-color: rgb(241, 236, 236);
-} */
+
+
+.landing-page{
+    height: 90vh;
+    overflow: hidden;
+    background-image: url("images/paperBg (2).jpg");
+    background-size: cover;
+}
 
 .bg-img{
     position: absolute;
     height: 100%;
     right: 0;
+    top: 0;
 }
 
 .cat-name {
-  color: black;
-  font-family: var(--font-title);
-  font-size: 5vw;
-  margin-left: 30px;
+    color: var(--first-color);
+    font-family: var(--font-title);
+    font-size: 5vw;
+    position: relative;
+    text-align: end;
 }
 
 .intro-text {
     color: black;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin: 30px;
     width: 40%;
+    position: absolute;
+    top: 0;
 }
 
 .wrapper{
+    display: flex;
     position: relative;
     overflow: hidden;
-    height: 60%;
+    height: 80%;
+    align-items: end;
 }
 
 @keyframes scrollLeft {
-    /* from{
-        left: 0;
-    } */
     to{
         left: -240px;
     }
@@ -92,4 +100,20 @@
 .item_8{
     animation-delay: calc(15s / 8 * (8 - 8) * -1);
     /* margin-left: 350px; */
+}
+
+@media (max-width: 576px) {
+
+    @keyframes scrollLeft {
+    to{
+        left: -170px;
+    }
+}
+    .infinite-img{
+        width: 170px;
+    }
+
+    .item{
+        left: max(calc(170px * 8), 50%);
+    }
 }
