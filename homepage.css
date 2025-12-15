@@ -1,10 +1,14 @@
-
-
 .landing-page{
     height: 90vh;
     overflow: hidden;
     background-image: url("images/paperBg (2).jpg");
     background-size: cover;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .bg-img{
@@ -18,8 +22,7 @@
     color: var(--first-color);
     font-family: var(--font-title);
     font-size: 5vw;
-    position: relative;
-    text-align: end;
+    width: fit-content;
 }
 
 .intro-text {
@@ -27,8 +30,9 @@
     font-size: 0.7rem;
     margin: 30px;
     width: 40%;
-    position: absolute;
+    /* position: absolute;
     top: 0;
+    right: 0; */
 }
 
 .wrapper{
@@ -105,15 +109,30 @@
 @media (max-width: 576px) {
 
     @keyframes scrollLeft {
-    to{
-        left: -170px;
+        to{
+            left: -170px;
+        }
     }
-}
+
     .infinite-img{
         width: 170px;
     }
 
     .item{
         left: max(calc(170px * 8), 50%);
+    }
+
+    .info-box{
+        flex-direction: column;
+    }
+
+    .intro-text{
+        width: 70%;
+    }
+}
+
+@media (max-width: 1000.98px ) {
+    .wrapper{
+        height: 50%;
     }
 }
