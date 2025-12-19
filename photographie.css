@@ -407,6 +407,24 @@
   }
 }
 
+.studio{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 12% 0;
+
+  & .studio-img{
+    width: 19%;
+
+    @media (max-width: 1000.98px) {
+      width: 45%;
+      margin: 10px;
+
+    }
+  }
+}
+
 @media (max-width: 1000px){
   .parallax-film-img {
     width: 12rem;
