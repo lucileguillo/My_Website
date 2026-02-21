@@ -6,11 +6,12 @@
   --fourth-color:rgb(255, 140, 159);
   --fifth-color: black;
   --sixth-color: rgb(198, 210, 227);
+  --seventh-color: #6c6c6c;
 
   /*font*/
   --font-title:"gigantic", sans-serif;
   --font-text:"azo-sans-uber", sans-serif;
-  --font-side:"dunhill-script", sans-serif;
+  --font-side:"komet", sans-serif;
 
   /*breakpoints*/
   --md-breakpoint: 1000.98px;
@@ -35,6 +36,23 @@ body {
     background-color: rgb(255, 255, 255);
     font-family: var(--font-text);
     overflow-x: none;
+}
+
+
+h2{
+
+    color: var(--first-color);
+    padding-bottom: 30px;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(255, 0, 0);
 }
 
 
@@ -82,15 +100,6 @@ body {
 #navigationBar > div {
     padding: 8px;
   }
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: rgb(255, 0, 0);
-}
 
 #sectionTwo {
   color: black;
@@ -205,5 +214,41 @@ footer {
 
   .custom-cursor {
     display: none;
+  }
+}
+
+
+/* video */
+
+.video {
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+
+  @media (max-width: 576px) {
+    
+  max-height: 90vh;
+  min-height: 50vh;
+  height: auto;
+
+  }
+
+}
+
+video {
+  max-height: 900px;
+  height: 100%;
+}
+
+@media (max-width: 1000.98px) {
+  *{
+    cursor:initial;
+  }
+  .video {
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 }

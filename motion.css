@@ -1,0 +1,13 @@
+
+p{
+
+    font-family: var(--font-side);
+    color: var(--seventh-color);
+
+    @media (max-width: 576px) {
+        
+        font-size: 11px;
+
+    }
+
+}

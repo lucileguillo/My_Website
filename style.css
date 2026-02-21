@@ -2,29 +2,6 @@
 
 /* Motion design */
 
-#video {
-  width: 100vw;
-  height: 90vh;
-  overflow: hidden;
-}
-
-video {
-  max-height: 900px;
-}
-
-@media (max-width: 1000.98px) {
-  *{
-    cursor:initial;
-  }
-  #video {
-    height: 70vh;
-    width: 100vw;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-}
 
 .projet_info {
   align-items: center;
