@@ -27,12 +27,9 @@
 
 .intro-text {
     color: black;
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin: 30px;
     width: 40%;
-    /* position: absolute;
-    top: 0;
-    right: 0; */
 }
 
 .wrapper{

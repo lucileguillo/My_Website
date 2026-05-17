@@ -29,6 +29,10 @@
 
 }
 
+.poupee__video{
+    height: 50%;
+}
+
 .dev_images{
 
     width: 50%;
@@ -47,9 +51,6 @@
     }
 
 }
-.dev_info{
-    padding: 10px;
-}
 
 .vid-size{
 
@@ -65,17 +66,4 @@
     @media (max-width: 1000.98px) {
         height: auto;
     }
-}
-
-p{
-
-    font-family: var(--font-side);
-    color: var(--seventh-color);
-
-    @media (max-width: 576px) {
-        
-        font-size: 11px;
-
-    }
-
 }
