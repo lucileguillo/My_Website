@@ -4,31 +4,6 @@
 
 }
 
-.dev_content{
-
-    display: flex;
-    height: 80%;
-
-    @media (max-width: 576px) {
-        
-        flex-direction: column;
-        height: auto;
-
-    }
-
-}
-
-.dev_video{
-    width: 50%;
-
-    @media (max-width: 576px) {
-        
-        width: 100%;
-
-    }
-
-}
-
 .poupee__video{
     height: 50%;
 }
@@ -58,12 +33,5 @@
         
         height: auto;
 
-    }
-}
-
-.video_dev{
-
-    @media (max-width: 1000.98px) {
-        height: auto;
     }
 }

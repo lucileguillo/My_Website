@@ -1,21 +1,3 @@
-
-
-/* Motion design */
-
-#showreeltitle {
-  font-size: 5vw;
-  margin-top: 1rem;
-}
-
-#showreelText {
-  font-family: "azo-sans-uber", sans-serif;
-  font-weight: 50;
-  font-style: normal;
-  color: rgb(108, 108, 108);
-  font-size: 0.8rem;
-  padding-bottom: 5rem;
-}
-
 /* Illustration */
 
 .carte {
@@ -130,10 +112,6 @@ main {
 
 
 /*graphisme*/
-
-.principal {
-  width: 100vw;
-}
 
 .project-item {
   display: flex;
