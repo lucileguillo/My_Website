@@ -1,27 +1,29 @@
 let intro = [
     {
-        image:"photographieBox/bretagneclassiccinq.webp",
+        image:"photographieBox/TourFrance26 (8).jpg",
     },
     {
-        image:"photographieBox/dounia-photoshoot_3.webp",
+        image:"photographieBox/WLG25-05.06_CharlotteCardin_lulurevee (15).jpg",
     },
     {
-        image:"photographieBox/anaelle-photoshoot_1.webp",
+        image:"photographieBox/WLG25-05.06_RoleModel_lulurevee (7).jpg",
     },
     {
-        image:"photographieBox/bretagneclassic.webp",
+        image:"photographieBox/TourFrance26 (7).jpg",
     },
     {
-        image:"photographieBox/DSCF5743.webp",
+        image:"photographieBox/WLG25-05.06_MaxBaby_lulurevee (9).jpg",
+    },
+    
+    {
+        image:"photographieBox/TourFrance26 (4).jpg",
+    },
+    
+    {
+        image:"photographieBox/WLG25-05.06_CharlotteCardin_lulurevee (12).jpg",
     },
     {
-        image:"photographieBox/anaelle-photoshoot-4.jpg",
-    },
-    {
-        image:"photographieBox/DSCF0721-2-2.webp",
-    },
-    {
-        image:"photographieBox/bretagneclassictrois.webp",
+        image:"photographieBox/RolandGarros26 (4).jpg",
     },
 ]
 
@@ -120,6 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Section Carrousel */
 let carrousel = [
+    { image:"photographieBox/TourFrance26 (7).jpg" },
+    { image:"photographieBox/TourFrance26 (8).jpg" },
+    { image:"photographieBox/TourFrance26 (6).jpg" },
+    { image:"photographieBox/TourFrance26 (5).jpg" },
+    { image:"photographieBox/TourFrance26 (1).jpg" },
+    { image:"photographieBox/TourFrance26 (2).jpg" },
+    { image:"photographieBox/TourFrance26 (3).jpg" },
+    { image:"photographieBox/TourFrance26 (4).jpg" },
     { image: "photographieBox/bretagneclassicquatre.webp" },
     { image: "photographieBox/bretagneclassictrois.webp" },
     { image: "photographieBox/bretagneclassicdeux.webp" },
@@ -140,6 +150,7 @@ const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 
 let extended = [...carrousel, ...carrousel, ...carrousel];
+
 
 extended.forEach(item => {
     const div = document.createElement("div");
@@ -174,9 +185,9 @@ function updatePosition(skipTransition = false) {
     slides.forEach((s, i) => {
         s.classList.toggle("active", i === indexActuel);
     });
-    }
+}
 
-    track.addEventListener("transitionend", () => {
+track.addEventListener("transitionend", () => {
 
     if (indexActuel < total) {
         indexActuel += total;
@@ -228,46 +239,32 @@ next.addEventListener("click", () => {
 
 updatePosition(true);
 
-
-/* Section Paysage */
-
-let photographiePaysage = [
-    {
-    image: "photographieBox/Montagne.webp",
-    taille: "grand",
-    },
-    {
-    image: "photographieBox/belleile.webp",
-    taille: "petit",
-    },
-    {
-    image: "photographieBox/12102024_street_photography_1.webp",
-    taille: "petit",
-    },
-    {
-    image: "photographieBox/festivalinterceltiquedeux.webp",
-    taille: "petit",
-    },
-    {
-    image: "photographieBox/festivalinterceltiqueun.webp",
-    taille: "petit",
-    },
-    {
-    image: "photographieBox/belleiledeux.webp",
-    taille: "grand",
-    },
+//concert carrousel 
+let concert = [
+    { image:"photographieBox/WLG25-05.06_CharlotteCardin_lulurevee (12).jpg" },
+    { image:"photographieBox/WLG25-05.06_CharlotteCardin_lulurevee (15).jpg" },
+    { image:"photographieBox/WLG25-05.06_MaxBaby_lulurevee (5).jpg" },
+    { image:"photographieBox/WLG25-05.06_MaxBaby_lulurevee (6).jpg" },
+    { image:"photographieBox/WLG25-05.06_CharlotteCardin_lulurevee (59).jpg" },
+    { image:"photographieBox/WLG25-05.06_RoleModel_lulurevee (7).jpg" },
+    { image:"photographieBox/WLG25-05.06_SudanArchives_lulurevee (3).jpg" },
+    { image:"photographieBox/WLG25-05.06_MaxBaby_lulurevee (9).jpg" },
+    { image: "photographieBox/WLG25-05.06_CharlotteCardin_lulurevee (8).jpg" },
+    { image: "photographieBox/WLG25-05.06_RoleModel_lulurevee (12).jpg" },
+    { image: "photographieBox/WLG25-05.06_Aupinard_lulurevee (15).jpg" },
+    { image: "photographieBox/WLG25-05.06_SudanArchives_lulurevee.jpg" },
 ];
 
-function creerPaysage(photographiePaysage) {
+function creerPaysage(concert) {
     let contenuPaysage = `
-        <img class="paysage-img ${photographiePaysage.taille}" src="${photographiePaysage.image}" alt="ImagePhotographie">
+        <img class="paysage-img" src="${concert.image}" alt="ImagePhotographie">
     `;
     let paysagePhoto = document.createElement("div");
     paysagePhoto.classList.add("paysage-grid");
     paysagePhoto.innerHTML = contenuPaysage;
     return paysagePhoto;
 }   
-for (let i = 0; i < photographiePaysage.length; i++) {
-    let paysagePhoto = creerPaysage(photographiePaysage[i]);
+for (let i = 0; i < concert.length; i++) {
+    let paysagePhoto = creerPaysage(concert[i]);
     document.querySelector("#paysage-container").appendChild(paysagePhoto);
 }
