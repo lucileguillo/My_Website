@@ -181,40 +181,49 @@ window.addEventListener('load', function () {
 //illustration 
 
 let Illustration = [
-  {
-    image: "illustrationBox/illustrationOne.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationTwo.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationThree.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationFour.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationFive.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationSix.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationSeven.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationEight.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationNine.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationTen.jpg",
-  },
-  {
-    image: "illustrationBox/illustrationEleven.jpg",
-  },
-  
+    {
+        image: "illustrationBox/illustration-statue.jpg",
+    },
+    {
+        image: "illustrationBox/illustration-antonelli.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationOne.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationTwo.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationThree.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationFour.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationFive.jpg",
+    },
+    {
+        image: "illustrationBox/illustration-russell.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationSix.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationSeven.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationEight.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationNine.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationTen.jpg",
+    },
+    {
+        image: "illustrationBox/illustrationEleven.jpg",
+    },
+    
 ];
 
 function creerCarte(Illustration) {
